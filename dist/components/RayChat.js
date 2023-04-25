@@ -12,7 +12,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 const removeElId = id => {
   if (id) {
     let elem = document.getElementById(id);
-    elem.parentNode.removeChild(elem);
+    if (elem && elem.parentNode) elem.parentNode.removeChild(elem);
   }
 };
 const removeElTag = selector => {
